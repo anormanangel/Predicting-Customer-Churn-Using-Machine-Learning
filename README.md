@@ -1,28 +1,28 @@
 # Predicting Customer Churn Using Machine Learning
 
 # Introduction
-Dived into developing and depolying a predictive machine learning model focusing on predicting customer churn from historical data. This involved Defining the Problem & bjective of the project, Data Collection, Data cleaning and Preprocessing, Exploratory Data Analysis, Feature Engineering, Model Creation, Model Evaluation, Model Optimization and Model Deployment
+Dived into developing and depolying a predictive machine learning model focusing on predicting customer churn from historical data. This involved Defining the Problem & objective of the project, Data Collection, Data cleaning and Preprocessing, Exploratory Data Analysis, Feature Engineering, Model Creation, Model Evaluation, Model Optimization, and Model Deployment
 
 Python code? Check them out here on GitHub: https://github.com/anormanangel/Predicting-Customer-Churn-Using-Machine-Learning
 
 # Background
 Driven by the quest to optimize business processes using machine learning, this project was born bt a desire to to develop a model that can accurately Predict customer churn based on customer data and relevant indicators. 
 
-The data for this project was obtained from Kaggle for a Tours and Travel company in the United States. This is a historical customer dataset where each row represents one customer offers straightforward insights. As it is more cost-effective to retain existing customers than acquire new ones, our primary goal in this analysis is to predict which customers will remain loyal to our services.
+The data for this project was obtained from Kaggle for a Tours and Travel company in the United States. This is a historical customer dataset where each row represents one customer and offers straightforward insights. As it is more cost-effective to retain existing customers than acquire new ones, our primary goal in this analysis is to predict which customers will remain loyal to our services.
 
 This data set provided key indicators of customer churn allowing us to anticipate the behaviors that contribute to customer retention and predict what behavior will help us to retain customers.
 
 The dataset includes information about:
 
 * Age of users
-* FrequesntFlyer: Wheather customer takes frequent flights
-* AnnualIncomeClass: Class of annual income of user
+* FrequesntFlyer: Whether the customer takes frequent flights
+* AnnualIncomeClass: Class of annual income of the user
 * ServicesOpted: Number of times services opted during recent years
-* AccountSyncedToSocialMedia: Wheather Company Account of User is Synchronized to their Social Media
-* BookedHotelOrNot: Wheather the customer booked lodging/Hotels using company services
+* AccountSyncedToSocialMedia: Whether Company Account of the User is Synchronized to their Social Media
+* BookedHotelOrNot: Whether the customer booked lodging/Hotels using company services
 * Target: 1 = Customers Churns, 0 = Customer Dosent Churn
 
-Link to dataseton Kaggle: https://bit.ly/3rzy2Sw
+Link to dataset on Kaggle: https://bit.ly/3rzy2Sw
 
 
 ### The three Questions I was asking were;
