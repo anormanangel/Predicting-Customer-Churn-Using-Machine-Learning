@@ -29,10 +29,10 @@ Link to dataseton Kaggle: https://bit.ly/3rzy2Sw
 
 1. What are the key indicators of customer churn?
 2. How can predictive models be built to predict customer churn for a tour and travel company based on customer data?
-3. How can insights gained from the predictive model be utilized to tailor retention efforts and allocate resources more effectively, including targeted marketing campaigns, personalized offers, enhanced customer service, or product improvements?
+3. How can insights gained from the predictive model be utilized to tailor retention efforts and allocate resources more effectively, including targeted marketing campaigns, personalized offers, enhanced customer retention, or improved customer satisfaction?
 
 # Tools I Used
-For my machine learning project predict customer churn, I used the powers of several key tools:
+For my machine learning project to predict customer churn, I used the powers of several key tools:
 
 1. **Data manipulation and analysis:** pandas & numpy
 2. **Handling missing data:** missingno
@@ -54,12 +54,12 @@ For my machine learning project predict customer churn, I used the powers of sev
 
 # The Analysis 
 ### 1. What are the key indicators of customer churn?
-The key indicators of customer churn were age, frequent flyer status and income class. Specifically,
-* The younger customers (27-28y) tend to churn propor- tionally more often.
+The key indicators of customer churn were age, frequent flyer status, and income class. Specifically,
+* The younger customers (27-28y) tend to churn more often.
 * Customers who opted for more services (5+) churned more than those who opted for a few services.
 * Frequent flyers churn more than non-frequent flyers.
 * High-income individuals churn more than low- and middle-income classes.
-* Customers who synced their account to social media churned more than those who didn’t.
+* Customers who synced their accounts to social media churned more than those who didn’t.
 * Customers who used the company’s service to book a hotel churned more than those who didn’t. 
 
 ### 2. How can predictive models be built to predict customer churn for a tour and travel company based on customer data?
@@ -68,10 +68,10 @@ The key indicators of customer churn were age, frequent flyer status and income 
 
 ![Handling Missing Data](https://github.com/anormanangel/Predicting-Customer-Churn-Using-Machine-Learning/blob/main/Assets/Missing%20Numbers.png)
 
-*Bar chat showing all coumns in the datset with no missing data*
+*Bar chat showing all columns in the dataset with no missing data*
 
-#### Exploring the relationship between vairables**
-* Univeriate Analysis: I explored the distribribution of churn variable individually to understand its distribution and characteristics.
+#### Exploring the relationship between variables**
+* Univariate Analysis: I explored the distribution of churn variables individually to understand their distribution and characteristics.
 The data is unbalanced, with 76.5% are customers in the "no-churn" class (modest class imbalance 3:1), which needs to be taken into account when training and evaluating the models.
 
 ![Churn Distribution](https://github.com/anormanangel/Predicting-Customer-Churn-Using-Machine-Learning/blob/main/Assets/Churn%20Distribution.png)
@@ -88,7 +88,7 @@ The data is unbalanced, with 76.5% are customers in the "no-churn" class (modest
 
 ![Correlation Matrix](https://github.com/anormanangel/Predicting-Customer-Churn-Using-Machine-Learning/blob/main/Assets/Correlation%20Matrix.png)
 
-*Spearman's correlation showing relationship between variables*
+*Spearman's correlation showing the relationship between variables*
 
 #### Machine Learning Modeling
 
@@ -96,11 +96,11 @@ Train test split: The process involves dividing the dataset into two parts: one 
 
 **Model Perfomance & Evaluation**
 Here we test some classic algorithms but also explore some classifiers that specifically account for unbalanced data (using imlearn).
-* Among the models we compared, Decsion tree classiifer perfomed the best with an overall accuracy of 90% with F1 Score of 93 and 77 for class 0 and class 1 respectivelt. The Gradient Boosting Classifier followed in order to predict customer churn. It performed with an overall accuracy of 89%, as well as an F1 score of 76 for the minority class.
+* Among the models we compared, the Decision tree classifier performed the best with an overall accuracy of 90% with F1 Score of 93 and 77 for class 0 and class 1 respectivelt. The Gradient Boosting Classifier followed in order to predict customer churn. It performed with an overall accuracy of 89%, as well as an F1 score of 76 for the minority class.
 * The random forest classifier (88% Accuracy) performs overall better than logistic regression. The balanced random forest classifier classifies the minority class often correctly, however, at the cost of many false negatives.
-* With the aaccuracy is 80%, Logistic Regression performs well but needs improvement. Introducing the balanced weight improved the recall for class 0 (from 0.94 to 0.79) but did not improve the overall perfomance of the model (76% accuracy)
+* With an accuracy is 80%, Logistic Regression performs well but needs improvement. Introducing the balanced weight improved the recall for class 0 (from 0.94 to 0.79) but did not improve the overall performance of the model (76% accuracy)
 * The balanced bagging classifier also favors the underrepresented class 1 (churned), providing the best f1-value for the minority class and an overall good accuracy of 87%.
-* Based on the analysis, the K Nearest Neighbors (KNN) model performs best when considering only the nearest neighbor (the single closest data point) when making predictions making it sensitve to ouliers and a risk of over fitting
+* Based on the analysis, the K Nearest Neighbors (KNN) model performs best when considering only the nearest neighbor (the single closest data point) when making predictions making it sensitve to outliers and a risk of overfitting
 
 ![Decision Tree](https://github.com/anormanangel/Predicting-Customer-Churn-Using-Machine-Learning/blob/main/Assets/Decison%20Tree.png)
 
@@ -112,9 +112,9 @@ Here we test some classic algorithms but also explore some classifiers that spec
 
 **Hyperparameter Tuning**
 * Tune the hyperparameters of the Decision Tree Classifier and Gradient Boosting Classifier using techniques such as Grid Search. Experiment with parameters like n_estimators, learning_rate, max_depth, and subsample.
-After Hyperparameter Tuning, The Model accuracy for Gradient Boosting imoroved from 89% to 90%. Retraining Decision tree improved its accuracy 0.9514866979655712 (95%)
+After Hyperparameter Tuning, The Model accuracy for Gradient Boosting improved from 89% to 90%. Retraining the Decision tree improved its accuracy by 0.9514866979655712 (95%)
 
-**Crriterai for Choice of Model to deploy**
+**Criteria for Choice of Model to Deploy**
 * Both the Decision Tree and Random Forest models have the same accuracy of approximately 0.9515, meaning they both correctly classify around 95.15% of instances.
 * But the Decision Tree model has a higher precision of approximately 0.9578 compared to the Random Forest model's precision of approximately 0.9450. This means that the Decision Tree model tends to make fewer false positive predictions compared to the Random Forest model.
 
@@ -122,13 +122,13 @@ After Hyperparameter Tuning, The Model accuracy for Gradient Boosting imoroved f
 
 * For our case, the cost of false positives (incorrectly identifying loyal customers as churners) is relatively high (e.g., offering unnecessary retention incentives to loyal customers), hence we are higher precision prioritized over recall.
 
-### Deploy Decsion Tree Model Using Gradio
+### Deploy decision tree Model Using Gradio
 Gradio is a Python library that simplifies the process of creating and deploying machine learning models with user interfaces. It provides an easy-to-use Python library for building web-based interfaces for machine learning models, allowing users to interact with the models through a browser.
 
 ### Insights & Interpretation
-1. The key indicators of customer churn were age, frequent flyer status and income class. Specifically,
+1. The key indicators of customer churn were age, frequent flyer status, and income class. Specifically,
 
-2. The younger customers (27-28y) tend to churn propor- tionally more often.
+2. The younger customers (27-28y) tend to churn  more often.
 
 3. Customers who opted for more services (5+) churned more than those who opted for a few services.
 
@@ -136,12 +136,12 @@ Gradio is a Python library that simplifies the process of creating and deploying
 
 5. High-income individuals churn more than low- and middle-income classes.
 
-6. Customers who synced their account to social media churned more than those who didn’t.
+6. Customers who synced their accounts to social media churned more than those who didn’t.
 
 # What I Learned
-* 🧩 **Advanced Python Concept for Data Analytics:** Mastered the art of using python for data manuplation, processing, vizualization and machine learning.
+* 🧩 **Advanced Python Concept for Data Analytics:** Mastered the art of using Python for data manipulation, processing, visualization and machine learning.
 
-* 📊 **Machine Learning:** I implemented various classirication models to predict customer churn including Logistic Regression, K-Nearest Neighbors, Random Forest, Gradient Boosting, Decision Tree, Support Vector Machine (SVM) & Naive Bayes.
+* 📊 **Machine Learning:** I implemented various classification models to predict customer churn including Logistic Regression, K-Nearest Neighbors, Random Forest, Gradient Boosting, Decision Tree, Support Vector Machine (SVM) & Naive Bayes.
 
 * 📌 **Deploying Models using Gradio** I build a web application using Gradio, integrating a machine learning model into a production environment where it can take in an input and return an output
 
@@ -150,6 +150,6 @@ Gradio is a Python library that simplifies the process of creating and deploying
 
 # Conclusions
 
-This project enhanced my data science & analytics skills using Python to build machine learning models and and provided valuable insights to predict customer churn and optimize business processes. Businesses can make data driven decision to identify customer at risk of churning and prevent them from churning thereby improving customer retention, increasing customer satisfaction and preventing loss revenue, 
+This project enhanced my data science & analytics skills using Python to build machine learning models and and provided valuable insights to predict customer churn and optimize business processes. Businesses can make data-driven decision to identify customers at risk of churning and prevent them from churning thereby improving customer retention, increasing customer satisfaction, and preventing loss of revenue, 
 
 
