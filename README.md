@@ -50,7 +50,7 @@ For my machine learning project to predict customer churn, I used the powers of 
     * GridSearchCV (for hyperparameter tuning)
     * Various metrics like accuracy_score, classification_report, confusion_matrix
 7. **Data preprocessing:** StandardScaler, LabelEncoder
-8. **Model deployment:** pickle (for saving and loading models)and Gradio (for creating a web interface for the model)
+8. **Model deployment:** Gradio for creating a web interface for the model
 
 # The Analysis 
 ### 1. What are the key indicators of customer churn?
