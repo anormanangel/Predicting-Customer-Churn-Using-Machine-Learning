@@ -8,7 +8,7 @@ Python code? Check them out here on GitHub: https://github.com/anormanangel/Pred
 # Background
 Driven by the quest to optimize business processes using machine learning, this project was born bt a desire to to develop a model that can accurately Predict customer churn based on customer data and relevant indicators. 
 
-The data for this project was obtained from Kaggle for a Tours and Travel company in the United States. This is a historical customer dataset where each row represents one customer and offers straightforward insights. As it is more cost-effective to retain existing customers than acquire new ones, our primary goal in this analysis is to predict which customers will remain loyal to our services.
+The dataset for this project was historical customer data where each row represents one customer and offers straightforward insights. As it is more cost-effective to retain existing customers than acquire new ones, our primary goal in this analysis is to predict which customers will remain loyal to our services.
 
 This data set provided key indicators of customer churn allowing us to anticipate the behaviors that contribute to customer retention and predict what behavior will help us to retain customers.
 
@@ -22,7 +22,7 @@ The dataset includes information about:
 * BookedHotelOrNot: Whether the customer booked lodging/Hotels using company services
 * Target: 1 = Customers Churns, 0 = Customer Dosent Churn
 
-Link to dataset on Kaggle: https://bit.ly/3rzy2Sw
+Link to dataset: https://bit.ly/3rzy2Sw
 
 
 ### The three Questions I was asking were;
